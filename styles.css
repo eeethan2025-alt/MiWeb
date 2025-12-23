@@ -227,3 +227,38 @@ body {
     grid-template-columns: 1fr;
   }
 }
+
+/* Header general */
+.header__inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 64px;
+  flex-wrap: wrap; /* permite que los elementos bajen en móvil */
+}
+
+/* En pantallas chicas */
+@media (max-width: 768px) {
+  .header__inner {
+    flex-direction: column;
+    height: auto;
+    padding: 12px 0;
+    gap: 12px; /* espacio entre logo, nav y redes */
+  }
+
+  .nav {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 12px;
+  }
+
+  .nav__link {
+    font-size: 14px;
+  }
+
+  .social {
+    display: flex;
+    gap: 12px;
+  }
+}
